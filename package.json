@@ -1,0 +1,48 @@
+{
+  "name": "ctousignant-react-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for a react project. Includes SASS compiler",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "grunt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tousignant-christopher/react-boilerplate.git"
+  },
+  "keywords": [
+    "React",
+    "ESNext",
+    "JSX",
+    "SASS",
+    "Babel",
+    "Grunt"
+  ],
+  "author": "Christopher Tousignant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tousignant-christopher/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/tousignant-christopher/react-boilerplate#readme",
+  "dependencies": {
+    "grunt": "1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^2.0.0",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babelify": "^10.0.0",
+    "grunt-browserify": "^5.3.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "uglifyify": "^5.0.1"
+  }
+}
