@@ -20,3 +20,23 @@ To run a development build
 To run a distribution build
 
     `grunt dist`
+
+## File Structure
+- Root
+    - build
+        - css
+        - js
+    - src
+        - js
+            - components
+            - main.js
+        - sass
+            - Abstract
+            - Vendors
+            - Base
+            - Components
+            - Layout
+            - Pages
+            - Themes
+            - main.scss
+
