@@ -8,7 +8,7 @@ module.exports = function (grunt) {
             },
             js : {
                 files: ['src/js/**/*.{js,jsx}'],
-                tasks: ['browserify:dev'],
+                tasks: ['browserify'],
             }
         },
         sass: {
