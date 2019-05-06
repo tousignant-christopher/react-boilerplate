@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-
+    pkg: grunt.file.readJSON('package.json'),
     grunt.initConfig({
         watch: {
             sass: {
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
             }
         },
         browserify: {
-            dev: {
+            build: {
                 files: [{
                     expand: true,
                     cwd: 'src/js',
@@ -52,25 +52,15 @@ module.exports = function (grunt) {
                         debug: true
                     }
                 }
+            }
+        },
+        uglify: {
+            options: {
+                compress: true
             },
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'src/js',
-                    src: ['main.js'],
-                    dest: 'build/js',
-                    ext: ".min.js"
-                }],
-                options: {
-                    transform: [
-                        ["babelify", {
-                            "presets": ["@babel/preset-env", "@babel/preset-react"]
-                        }],
-                        'uglifyify'
-                    ],
-                    browserifyOptions: {
-                        debug: true
-                    }, 
+            build: {
+                files: {
+                    'build/js/main.min.js': ['build/js/main.js' ]
                 }
             }
         }
@@ -80,9 +70,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-browserify');
-    grunt.loadNpmTasks('babelify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['sass', 'browserify:dev', 'watch']);
-    grunt.registerTask('dist', ['sass', 'browserify:dist', 'cssmin']);
+    grunt.registerTask('default', ['sass', 'browserify', 'watch']);
+    grunt.registerTask('dist', ['sass', 'browserify', 'uglify', 'cssmin']);
 
 };

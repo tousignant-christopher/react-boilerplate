@@ -32,6 +32,7 @@
   "dependencies": {
     "grunt": "1.0.1",
     "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^2.0.0",
     "jquery": "^3.3.1"
@@ -43,7 +44,6 @@
     "babelify": "^10.0.0",
     "grunt-browserify": "^5.3.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "uglifyify": "^5.0.1"
+    "react-dom": "^16.8.6"
   }
 }
